@@ -1,30 +1,10 @@
-<div class="flex justify-center min-h-screen items-center">
-  <div class="w-[70%] flex gap-3">
-    <div class="flex flex-col justify-between">
-      <h1 class="text-left text-5xl font-bold text-cyan-500">Hypotheek Calculator</h1>
-      <button class="bg-rose-700 hover:bg-rose-600 text-white p-6 text-2xl font-bold rounded-xl" (click)="calculate()">Bereken</button>
-    </div>
+<nav>
+  <h1 class="text-left text-5xl font-bold text-cyan-500">Hypotheek Calculator</h1>
+</nav>
 
-    <section class="flex flex-wrap flex-row gap-3 basis-full">
-      <section class="flex bg-cyan-500 p-7 rounded-3xl grow flex-col">
-        <h2 class="text-white text-3xl font-bold mb-5">Hypotheekbedrag</h2>
-        <input #hypotheekbedrag class="selection:bg-cyan-500 text-2xl rounded-2xl py-2 px-3 ring-4 ring-cyan-600 outline-none" value="350000" placeholder="Hoeveel gaat u lenen?" />
-      </section>
-      <section class="flex bg-orange-500 p-7 rounded-3xl grow flex-col">
-        <h2 class="text-white text-3xl font-bold mb-5">Doorlooptijd</h2>
-        <input #hypotheektijd class="selection:bg-orange-500 text-2xl rounded-2xl py-2 px-3 ring-4 ring-orange-600 outline-none" value="30" placeholder="Hoeveel jaar om af te lossen/" />
-      </section>
-    </section>
-    <section class="flex flex-wrap flex-row gap-3 basis-full ">
-      <section class="flex bg-yellow-500 p-7 rounded-3xl grow flex-col ">
-        <h2 class="text-white text-3xl font-bold mb-5 selection:bg-blue-500">Rentepercentage</h2>
-        <input #hypotheekrente class=" text-2xl selection:bg-yellow-500 rounded-2xl py-2 px-3 ring-4 ring-yellow-400 outline-none" value="1.66"  placeholder="Hoeveel procent" />
-      </section>
-      <section class="flex bg-gray-200 p-7 rounded-3xl grow flex-col">
-        <h3 class="text-gray-500 text-2xl font-bold mb-5">Bruto per maand</h3>
-        <h2 class="text-sky-800 text-4xl font-bold mb-3 text-center underline">{{ calculatedValue | currency }}</h2>
-      </section>
-    </section>
-  </div>
-</div>
+<section class="flex-grow flex flex-col overflow-auto relative min-h-[500px] bg-gray-50">
+  <router-outlet></router-outlet>
+</section>
+
+
 

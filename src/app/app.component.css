@@ -1,0 +1,7 @@
+:host {
+  @apply flex flex-col min-h-screen max-h-screen;
+}
+
+nav {
+  @apply h-36 min-h-[144px] sticky shadow-sm flex items-center justify-center z-10;
+}

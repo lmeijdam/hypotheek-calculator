@@ -1,0 +1,32 @@
+<div class="grid-cols-1 md:grid-cols-2 lg:w-[90%] w-full grid gap-3">
+  <div class="rounded-3xl bg-cyan-500 flex flex-col p-4 min-h-[130px] items-stretch justify-between shadow-sm">
+    <h2 class="text-white text-3xl font-bold">Hypotheekbedrag</h2>
+    <input #hypotheekbedrag
+      class="selection:bg-cyan-500 text-2xl rounded-2xl py-2 px-3 ring-4 ring-cyan-600 outline-none " value="400000"
+      placeholder="Hoeveel gaat u lenen?" />
+  </div>
+  <div class="rounded-3xl bg-orange-500 flex flex-col p-4 min-h-[130px] items-stretch justify-between shadow-sm">
+    <h2 class="text-white text-3xl font-bold">Rente %</h2>
+    <input #hypotheekrente
+      class="selection:bg-cyan-500 text-2xl rounded-2xl py-2 px-3 ring-4 ring-orange-600 outline-none " value="2.01"
+      placeholder="Hoeveel gaat u lenen?" />
+  </div>
+  <div class="rounded-3xl bg-yellow-500 flex flex-col p-4 min-h-[130px] items-stretch justify-between shadow-sm">
+    <h2 class="text-white text-3xl font-bold">Looptijd</h2>
+    <input #hypotheektijd
+      class="selection:bg-cyan-500 text-2xl rounded-2xl py-2 px-3 ring-4 ring-yellow-600 outline-none " value="30"
+      placeholder="Hoeveel gaat u lenen?" />
+  </div>
+
+  <div class=" rounded-3xl bg-gray-100 flex p-4 min-h-[150px] items-stretch justify-between md:col-span-2 shadow-sm">
+    <div class="flex flex-col justify-between">
+      <h3 class="text-gray-700 text-2xl font-bold">Bruto per maand</h3>
+      <h2 class="text-sky-800 text-4xl font-bold">{{ calculatedValue | currency }}</h2>
+    </div>
+    <button class="w-3/12 p-4 bg-red-700 text-white rounded-3xl font-bold" (click)="calculate()">Bereken</button>
+
+  </div>
+
+
+
+</div>
